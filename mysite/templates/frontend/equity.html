@@ -1,0 +1,457 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% block content %}
+  <style>
+
+    .pricing_single img {
+            vertical-align: middle;
+            border-style: none;
+            padding: 14px 5px 5px 5px;
+            width: 94%;
+        }    
+
+    body{
+      padding: 0%;
+      margin: 0%;
+      font-family: sans-serif;
+    }
+
+    .banner-1, .banner-2, .banner-3, .banner-4{
+      height: 100vh;
+      width: 85%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding-top: 20%;
+    }
+
+    #slider img{
+      width: 32%;
+      position: absolute;
+      left: 94%;
+      top: 62%;
+      transform: translate(-50%,-50%);
+      float: right;
+      margin-right: 20%;
+    }
+
+    .text-box{
+      width: 600px;
+      position: absolute;
+      top: 100px;
+      left: 110px;
+      color: white;
+      margin-left: 2%;
+    }
+
+    .text-box h1{
+      margin-bottom: 40px;
+      color:white;
+    }
+
+    .text-box p{
+      font-size: 20px;
+      line-height: 18px;
+      margin-top: 80px;
+    }
+
+    .text-box span{
+      background: red;
+      height: 1px;
+      width: 100px;
+      position: absolute;
+    }
+
+    .banner-1{
+      animation: slide1 12s linear infinite;
+    }
+
+    .banner-2{
+      animation: slide2 12s linear infinite;
+    }
+ 
+    .banner-3{
+      animation: slide3 12s linear infinite;
+    }
+
+    .banner-4{
+      animation: slide4 12s linear infinite;
+    }
+
+    @keyframes slide1{
+      0%{
+        visibility: visible;
+      }
+      25%{
+        visibility: hidden;
+      }
+      50%{
+        visibility: hidden;
+      }
+      75%{
+        visibility: hidden;
+      }
+      100%{
+        visibility: hidden;  
+      }
+
+    }
+
+    @keyframes slide2{
+      0%{
+        visibility: hidden;
+      }
+      25%{
+        visibility: hidden;
+      }
+      50%{
+        visibility: visible;
+      }
+      75%{
+        visibility: hidden;
+      }
+      100%{
+        visibility: hidden;  
+      }
+
+    }
+
+    @keyframes slide3{
+      0%{
+        visibility: hidden;
+      }
+      25%{
+        visibility: hidden;
+      }
+      50%{
+        visibility: hidden;
+      }
+      75%{
+        visibility: hidden;
+      }
+      100%{
+        visibility: hidden;  
+      }
+    }
+
+    @keyframes slide4{
+      0%{
+        visibility: hidden;
+      }
+      25%{
+        visibility: hidden;
+      }
+      50%{
+        visibility: hidden;
+      }
+      75%{
+        visibility: hidden;
+      }
+      100%{
+        visibility: visible;  
+      }
+
+    }
+
+        body {
+          font-family: Arial;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        form.example input[type=text] {
+          padding: 10px;
+          font-size: 17px;
+          border: 1px solid grey;
+          float: left;
+          width: 80%;
+          background: #f1f1f1;
+        }
+        
+        form.example button {
+          float: left;
+          width: 20%;
+          padding: 10px;
+          background: #2196F3;
+          color: white;
+          font-size: 17px;
+          border: 1px solid grey;
+          border-left: none;
+          cursor: pointer;
+        }
+        
+        form.example button:hover {
+          background: #0b7dda;
+        }
+        
+        form.example::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+   
+  </style>
+
+    <section id="slider">
+      <div class="banner-1">
+        <img src={% static "frontend/images//team/team-12.png" %} >
+        <div class="text-box">
+          <h1 style="color: white;"><b style="color: tomato;">Are you an investor?</b><br/>
+            Build your
+            startup investment
+            portfolio</h1>
+            <span></span>
+          <p>Access early- and growth-stage
+            startups, unicorns, VC funds, and debt</p>
+        </div>
+      </div>
+
+      <div class="banner-2">
+        <img src={% static "frontend/images//team/team-13.png" %} >
+        <div class="text-box">
+          <h1 style="color: white;"><b style="color: tomato;">Are you a startup?</b><br/>
+            Raise capital
+            from idea to IPO</h1>
+            <span></span>
+          <p>With angels, institutions,
+            and family offices</p>
+        </div>
+      </div>
+
+      <div class="banner-3">
+        <img src={% static "frontend/images//team/team-14.png" %}>
+        <div class="text-box">
+          <h1 style="color: white;">Single dashboard
+            equity
+            management</h1>
+            <span></span>
+          <p>Digitise, secure, and manage
+            your cap tables and ESOPs with
+            MyStartupEquity
+            </p>
+        </div>
+      </div>
+
+      <div class="banner-4">
+        <img src={% static "frontend/images//team/team-15.png" %}>
+        <div class="text-box">
+          <h1 style="color: white;">Private market
+            investing made</h1>
+            <span></span>
+          <p>Unlock opportunities from
+            idea to IPO</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="token_sale_06" style="padding-top: 40%;">
+      <div class="container">
+          <div class="row">        
+              <div class="col-sm-12">
+                  <div class="sub-title">
+                      <h6 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Startups looking for Private Equity</h6>
+                      <h2 class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">Connect us for more startups & SMEs Private Equity</h2>
+                  </div>
+              </div>
+          </div>        
+          <div class="row pricing_items">        
+              <div class="col-sm-12 col-md-6 col-lg-4 single-wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                  <div class="pricing_single">
+                      <img src={% static "frontend/images/icons/logo1.jpg" %} alt=""><hr>
+                  
+                      <div class="offer_price" style="float: right;">
+                          <h4>Wahington,Dc <span class="hover_text">Wahington,Dc</span><span class="shape_1"></span></h4>
+                      </div>
+                      <div class="offer_details">
+                          <span>Washington, D.C., formally the District of Columbia and also known as D.C. or just Washington, is the capital city of the United States.</span>
+                          </div>
+                    <div class="row">
+                          <div class="col-sm-4 col-md-4 col-lg-4">  
+                          <h6 style="color: salmon;" >RAISED</h6>
+                          <p>$2M</p>
+                      </div>
+                          <div class="col-sm-4 col-md-4 col-lg-4">  
+                          <h6 style="color: seagreen;" >COMMITTED</h6>
+                          <p>$5M</p>
+                      </div>
+                          <div class="col-sm-4 col-md-4 col-lg-4">  
+                          <h6 style="color: orange" >GOAL</h6>
+                          <p>$10M</p>
+                      </div>
+                    </div>
+                      
+                      <div class="sale">
+                          <a href="#" title="">Contact Us</a>
+                      </div>
+                          
+                  </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 single-wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                  <div class="pricing_single">
+                      <img src={% static "frontend/images/icons/logo2.jpg" %} alt=""><hr>
+                      <div class="offer_price">
+                          <h4>Noida <span class="hover_text">Noida</span><span class="shape_1"></span></h4>
+                      </div>
+                      <div class="offer_details">
+                          <span>Industrial Area Development Act, 1976, NOIDA has now emerged as a planned, integrated, modern industrial city which is well connected to the India</span>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4">  
+                        <h6 style="color: salmon;" >RAISED</h6>
+                        <p>$2M</p>
+                    </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4">  
+                        <h6 style="color: seagreen;" >COMMITTED</h6>
+                        <p>$5M</p>
+                    </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4">  
+                        <h6 style="color: orange" >GOAL</h6>
+                        <p>$10M</p>
+                    </div>
+                  </div>
+                      <div class="sale">
+                          <a href="#" title="">Contact Us</a>
+                      </div>
+                          
+                  </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4 single-wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                  <div class="pricing_single">
+                      <img src={% static "frontend/images/icons/logo3.jpg" %} alt=""><hr>
+                       <div class="offer_price"> 
+                          <h4>Delhi <span class="hover_text">Delhi</span><span class="shape_1"></span></h4>
+                      </div> 
+                      <div class="offer_details">
+                          <span>Delhi officially the National Capital Territory (NCT) of Delhi, is a city and a union territory of India containing New Delhi.</span>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-4 col-md-4 col-lg-4">  
+                            <h6 style="color: salmon;" >RAISED</h6>
+                            <p>$2M</p>
+                        </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">  
+                            <h6 style="color: seagreen;" >COMMITTED</h6>
+                            <p>$5M</p>
+                        </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">  
+                            <h6 style="color: orange" >GOAL</h6>
+                            <p>$10M</p>
+                        </div>
+                      </div>
+                      <div class="sale">
+                          <a href="#" title="">Contact Us</a>
+                      </div>
+                          
+                  </div>
+              </div>
+              <!-- <div class="col-sm-12 col-md-6 col-lg-4 single-wrapper wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                  <div class="pricing_single">
+                      <img src="images/icons/feature-01.png" alt=""> -->
+                      <!-- <div class="offer_price">
+                          <h4>Normal Price <span class="hover_text">Normal Price</span><span class="shape_1"></span></h4>
+                      </div> -->
+                      <!-- <div class="offer_details"> -->
+                          <!-- <span>15 Days</span> -->
+                          <!-- <h3 >IPO</h3>
+                          <p>$2M</p>
+                      </div>
+                      <div class="sale">
+                          <a href="#" title="">Contact Us</a>
+                      </div>
+                          
+                  </div>
+              </div> -->
+          </div> 
+  
+          <!-- <div class="row pricing_bottom">        
+              <div class="col-sm-12 col-md-12 col-lg-12">  
+                  <div class="pricing_list_wrapper">
+                      <ul class="list-unstyled item_list_1  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                          <li><h3>Pre-Sale starts</h3> <span>07-08-2020</span></li>
+                          <li><h3>Pre-Sale End</h3> <span>07-08-2020</span></li>
+                       </ul>                
+                       <ul class="list-unstyled item_list_2  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                          <li><h3>Pre-Sale Terms</h3> <span>First week 25% bonus and then 20% bonus</span></li>
+                          <li><h3>Token Price</h3> <span>$0.90 USD</span></li>
+                       </ul>                
+                       <ul class="list-unstyled item_list_3  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".4s">
+                          <li><h3>Total of Token</h3> <span>5,87,085,070</span></li>
+                          <li><h3>Specifications</h3> <span>Ecology Token</span></li>
+                       </ul>                     
+                  </div>
+              </div>
+          </div>           -->
+      </div>
+      <span class="shape1 header-shape"><img src={% static "frontend/images/shape/home_6/token_sale.png" %} alt=""></span> 
+      <span class="shape2 header-shape"><img src={% static "frontend/images/shape/home_6/token_sale_1.png" %} alt=""></span>  
+      <span class="bubble1 header-shape"><img src={% static "frontend/images/particals_icon/fixed1.png" %} alt=""></span>   
+      <span class="bubble2 header-shape"><img src={% static "frontend/images/particals_icon/fixed1.png" %} alt=""></span>     
+      <span class="bubble4 header-shape"><img src={% static "frontend/images/particals_icon/fixed3.png" %} alt=""></span>
+      <div id="particles5-js" class="particles"></div>  
+  </section> <!-- End token_sale -->
+
+      <section id="ico_news_02" class="ico_news_02" style="padding-top: 10%;">
+        <div class="container">
+            <div class="row">        
+                <div class="col-sm-12">
+                    <div class="title-wrapepr">
+                        <div class="news-title"> 
+                            <div class="sub-title">
+                                <h2 class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">Woo Funds</h2>
+                                <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">NRM assistant will instantly analyze user data use.</p>
+                            </div>
+                            <a href="#" class="more_news  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s"><i class="flaticon-right-arrow"></i>More News</a> 
+                        </div> 
+                    </div>
+    
+                </div>
+            </div>
+            <div class="row  wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s">
+                <div class="col-sm-6 col-md-6  col-lg-4 single-blog-wrapper">
+                    <div class="singel-blog">
+                        <h3><a href="#" title="" style="color: white;" >Crypto can I use to purchase</a></h3>
+                        <div class="post-date d-flex justify-content-between">
+                            <span class="date">15 june, 2020</span>
+                            <span class="time">3 min</span>
+                        </div>  
+                        <p>Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis comparison of neurons in which will be self-corrected, based on the history.</p>
+                        <a href="https://www.ecologytheme.com/theme/cryptonio/read_more_btn" title="">Read More</a>
+                    </div>   
+                </div>        
+    
+                <div class="col-sm-6 col-md-6  col-lg-4  single-blog-wrapper">
+                    <div class="singel-blog">
+                        <h3><a href="#" title="" style="color: white;">Dinatiy ICO compss press</a></h3>
+                        <div class="post-date d-flex justify-content-between">
+                            <span class="date">june 15, 2020</span>
+                            <span class="time">3 min</span>
+                        </div>  
+                        <p>Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis comparison of neurons in which will be self-corrected, based on the history.</p>
+                        <a href="https://www.ecologytheme.com/theme/cryptonio/read_more_btn" title="">Read More</a>
+                    </div>   
+                </div>          
+    
+                <div class="col-sm-6 col-md-6  col-lg-4  single-blog-wrapper">
+                    <div class="singel-blog">
+                        <h3><a href="#" title="" style="color: white;">We are listed in an Exchange</a></h3>
+                        <div class="post-date d-flex justify-content-between">
+                            <span class="date">july 15, 2020</span>
+                            <span class="time">3 min</span>
+                        </div>  
+                        <p>Artificial intelligence based on neural networks, built using the newest algorithms for self learning, analysis comparison of neurons in which will be self-corrected, based on the history.</p>
+                        <a href="https://www.ecologytheme.com/theme/cryptonio/read_more_btn" title="">Read More</a>
+                    </div>   
+                </div>
+                <!-- <div class="container" style="padding-top: 5%;">
+                    <h2 class=" wow fadeInUp; text-center" data-wow-duration="2s" data-wow-delay=".2s" style="color: white;">Buy unlisted or Pre IPO shares</h2><br/>
+                    <p class=" wow fadeInUp" data-wow-duration="2s" data-wow-delay=".3s"><b>How to buy best unlisted/ Pre-IPO shares online?</b><br/>
+                    If you are getting the question that how to buy best unlisted shares online than your search ends here. We are group of professionals based out of Mumbai helping investors to invest in unlisted shares online.</p>
+                </div> -->
+            </div>
+        </div>
+    </section> <!-- End ico_news -->
+{% endblock %}
+
+    

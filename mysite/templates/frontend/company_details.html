@@ -1,0 +1,138 @@
+{% extends 'frontend/base1.html' %}
+{% load static %}
+{% block content %}
+<style>
+@media only screen and (max-width: 600px) {
+  .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding-left: 0px;
+      margin-bottom: 0;
+      list-style: none;
+  }
+}
+</style>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12" style="margin-top: 48px;">
+                <p>&nbsp;</p>
+                <h4 align="center" style="color:black"><ins><b>Company Overview</b></ins></h4>
+                <p>&nbsp;</p>
+                <div class="row">
+                    <div class="col-12 pt-2">
+                      <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Company Details</a>
+                        <a class="nav-link" id="v-pills-board-tab" data-toggle="pill" href="#v-pills-board" role="tab" aria-controls="v-pills-board" aria-selected="false">Board Members</a>
+                        <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Anual Report</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Reviews</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">News</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-faq" role="tab" aria-controls="v-pills-faq" aria-selected="false">FAQ</a>
+                      </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-9"> -->
+                      <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show padd active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" style="padding:8px">
+                            <!-- <p align="center"><b>About Company</b></p><br/> -->
+                            {% comment %} <p align="justify">{{data.about}}</p> {% endcomment %}
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                  <tr class="danger" style="background-color: aliceblue">
+                                    <th><b>Particulars</b></th>
+                                    <th><b>Narration</b></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Total Capital</td>
+                                    <td>{{data.total_shares}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>LOT Size</td>
+                                    <td>{{data.lot_size}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Face Value</td>
+                                    <td>{{data.face_value}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>ISIN</td>
+                                    <td>{{data.isin}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Current Share Price</td>
+                                    <td>{{data.current_price}}</td>
+                                  </tr>
+                                  <tr>
+                                    <td>PAN Number</td>
+                                    <td>{{data.pan_no}}</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="tab-pane fade padd" id="v-pills-board" role="tabpanel" aria-labelledby="v-pills-board-tab" style="padding:8px">
+                          {% comment %} <P align="ceneter"><b>Management of the Company</b></p> {% endcomment %}
+                            <table class="table table-bordered">
+                              <thead style="background-color: aliceblue">
+                                <tr>
+                                  <th>Name</th>
+                                  <th>Designation</th>
+                                </tr>
+                              </thead>
+                              <tbody>  
+                                {% for data in boards %}
+                                <tr class="info">
+                                  <td>{{data.name}}</td>
+                                  <td>{{data.designation}}</td>
+                                </tr>
+                                {% endfor %}
+                              </tbody>
+                            </table>
+                      </div>
+                        <div class="tab-pane fade padd" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" style="padding:8px">
+                            {% comment %} <p><b>Annual Reports for the Last 2 Years are as Under:</b></p> {% endcomment %}
+                            <p><a href="http://103.251.94.87:8080/uploads/files/{{data.pitch_deck}}" download>{{data.pitch_deck}}</a></p>
+                            <p><a href="http://103.251.94.87:8080/uploads/files/{{data.business_financial_projection}}" download>{{data.business_financial_projection}}</a></p>
+                        </div>
+                        <div class="tab-pane fade padd" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" style="padding:8px" style="padding:8px">
+                          {% comment %} <p align="center"><b>Company Reviews</b></p> {% endcomment %}
+                          <ul>
+                            {% for data in reviews %}
+                              <!-- <h5>{{data.name}}</h5> -->
+                              <li>{{data.reviews}}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                        <div class="tab-pane fade padd" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" style="padding:8px">
+                          {% comment %} <p align="center"><b>Company News</b></p> {% endcomment %}
+                          {% for data in news %}
+                              <p><b>{{data.title}}</b></p>
+                              <!-- <p style="color: sandybrown">{{data.subject}}</p> -->
+                              <p>{{data.paragraph1}}</p>
+                              <p>{{data.paragraph2}}</p>
+                              <p>{{data.paragraph3}}</p>
+                              <p>{{data.paragraph4}}</p>
+                              <p>{{data.paragraph5}}</p>
+                            {% endfor %}
+                        </div>
+                        <div class="tab-pane fade padd" id="v-pills-faq" role="tabpanel" aria-labelledby="v-pills-faq-tab" style="padding:8px">
+                            {% comment %} <p align="center"><b>FAQ</b></p> {% endcomment %}
+                            {% for data in faqs %}
+                            <button type="button" class="btn btn-warning" data-toggle="collapse" data-target="#demo{{data.id}}">{{data.question}}</button>
+                            <div id="demo{{data.id}}" class="collapse in">
+                              {{data.answer}}
+                            </div>
+                            {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                    <p>&nbsp;</p>
+                  </div>
+            </div>           
+        </div>  
+    </div>
+    <p>&nbsp;</p>
+</header> <!-- End Header -->
+{% endblock %}

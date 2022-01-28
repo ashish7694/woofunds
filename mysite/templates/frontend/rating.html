@@ -1,0 +1,38 @@
+{% extends 'frontend/base1.html' %}
+{% load static %}
+{% block content %}
+
+<section class="hero-wrap hero-wrap-2" style="background-image:url({% static 'frontend/images/bg_5.jpg' %})" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="row no-gutters slider-text align-items-end justify-content-center">
+    <div class="col-md-9 ftco-animate mb-5 text-center">
+    <p class="breadcrumbs mb-0"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Services <i class="fa fa-chevron-right"></i></span></p>
+    <h1 class="mb-0 bread">rating</h1>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <div class="container" style="padding-top: 5%;">
+        <h3 style="color: chartreuse;">Business Plan Analytics</h3>
+        <p><b>WOO Funds’s patented business plan software, Enterprise Analyzer™, provides business plan benchmarking. Enterprise Analyzer™ does not analyze, benchmark, research, or touch any securities offered by the businesses.
+            The following is a brief, but not exhaustive, description of the metrics provided:</b></p>
+        <ul>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Popularity Rating:- </b>This algorithmic green star metric quantifies the level of interest that each company is receiving from investors and the public as compared to peer companies by measuring profile views, message response rates, and document view rates. Each Popularity metric also includes hover over details such as the number of company profile and document views, the number of documents requested, investor engagement response rates, and the amount of capital raised as compared to a company’s reported funding goal. For more information on our Popularity e Metric, please</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Analytics Rating:-</b> This algorithmic gold star metric statistically benchmarks a business plan’s underlying financial projections, Risk and Return profile, and Valuation as compared to peer companies. Each Analytics metric also includes hover over details such as the estimated number of business plan projections that may be abnormal, estimated benchmark risk, estimated benchmark return, and estimated premium or discount of the business plan’s reported valuation as compared to peer companies.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Projection Alerts:- </b> Estimated number of the business plan projections that may be abnormal. Benchmarks are derived from WOO Funds’s peer business database. Red flags are more severe than yellow flags.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Benchmark Risk:- </b>Estimated probability of failure of the business plan through the company’s reported projected liquidity event as compared to peer companies.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Benchmark Return:- </b>Estimated internal rate of return adjusted for the business plan’s projection alerts and business plan risk level as compared to peer companies.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Valuation Premium/Discount:- </b>Estimated premium or discount of company’s pre-money valuation as compared to peer companies.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Valuation:- </b>Enterprise Analyzer estimates business plan valuation based on 3,000+ private and public market ratios and factors. Proprietary valuation correlations for each specific sector are incorporated into a discounted cash flow model that is adjusted dynamically based on comparable rates of return within WOO Funds’s real-time peer benchmarking database.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Risk:- </b>Enterprise Analyzer estimates the business plan indicated business plan risk based on statistics from 500,000 cases of business failure and success. It compares 30+ business attributes to WOO Funds’s proprietary risk correlations to compute business plan risk. Enterprise Analyzer then generates multiple metrics of risk, including the probability of business plan survival and 10 dimensions of business plan risk such as management risk, market risk, and capitalization risk.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);">Return:- </b>Enterprise Analyzer estimates the potential rate of return for the business plan based on the premium or discount of the business’s reported valuation compared to the valuation estimated independently by Enterprise Analyzer. Two metrics of return are produced for each business, risk-adjusted rate of return and risk-unadjusted rate of return.</li><br/>
+            <li align="justify"><b style="color:rgb(147, 223, 147);"> Undercapitalization:- </b>Enterprise Analyzer estimates potential deficiencies in the projected capitalization plan of businesses. Undercapitalization is determined by comparing risk-adjusted free cash flows to the projected net capitalization of businesses within the context of achieving positive net cash flow from operations.
+                Enterprise Analyzer’s analytics do not value the risk or return, potential or real, of any security or debt instrument attached to the business plan analyzed. WOO Funds business analytics do not constitute investment advice offered by WOO Funds Inc., and are provided solely for informational purposes and therefore are not an offer to buy or sell a security, and are not warranted to be accurate, complete, or timely.
+                By using this website you acknowledge that you will use the business plan analytics solely for informational purposes and not as an indicator or determinate of business success, or as an indication to buy or sell securities. The analytics and ratings do not substitute for thorough in-depth due diligence that investors should perform. All probabilities are generated by weighing the information the company has provided on its business plan against peer companies which have previously entered information on WOO Funds. No efforts have been made to investigate the legitimacy of the representations made by the companies. All information used in generating these benchmarks is available publicly on WOO Funds, and from other resources.
+                By using this website and the associated tools, you further acknowledge that all metrics are objective, computer-generated, are in no way subjective, and are not tailored to your specific investment or risk criteria, use, or need. You further agree to indemnify and hold-harmless WOO Funds Inc. and all partners and affiliates from any loss or harm by using the any metrics derived from, or by WOO Funds and from trading decisions, damages, or other losses resulting from, or related to, this information, data, analyses or their use. Investment decisions should not be made in reliance of these metrics. Investors are responsible for their own due-diligence. For more on the risks of investing, please visit www.WOO Funds.com/risk-factors.</li><br/>
+        </ul>    
+    </div>
+
+{% endblock %}
